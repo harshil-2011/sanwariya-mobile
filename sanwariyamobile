@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanwariya Mobile Collection - Dhamnod</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .mobile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .hero-pattern {
+            background-image: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.7) 100%);
+        }
+        .scroll-hidden::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header/Navigation -->
+    <header class="bg-blue-600 text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-mobile-alt text-2xl"></i>
+                <h1 class="text-xl md:text-2xl font-bold">Sanwariya Mobile Collection</h1>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-blue-200 transition">Home</a>
+                <a href="#products" class="hover:text-blue-200 transition">Products</a>
+                <a href="#about" class="hover:text-blue-200 transition">About</a>
+                <a href="#contact" class="hover:text-blue-200 transition">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-700 px-4 py-2">
+            <div class="flex flex-col space-y-3">
+                <a href="#home" class="hover:text-blue-200 transition">Home</a>
+                <a href="#products" class="hover:text-blue-200 transition">Products</a>
+                <a href="#about" class="hover:text-blue-200 transition">About</a>
+                <a href="#contact" class="hover:text-blue-200 transition">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-gray-900 text-white py-16 md:py-24 overflow-hidden">
+        <div class="hero-pattern absolute inset-0"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4">Best Mobile Prices in Dhamnod</h2>
+                    <p class="text-lg md:text-xl mb-6 text-gray-300">Get the latest smartphones at unbeatable prices with warranty and after-sales support.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="#products" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition">View Collection</a>
+                        <a href="#contact" class="bg-white hover:bg-gray-200 text-gray-900 px-6 py-3 rounded-lg font-medium transition">Contact Us</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" 
+                         alt="Mobile Phones Collection" 
+                         class="rounded-lg shadow-2xl max-w-full h-auto md:max-w-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="bg-white py-8">
+        <div class="container mx-auto px-4">
+            <h3 class="text-center text-xl font-semibold mb-6 text-gray-700">Trusted Brands</h3>
+            <div class="flex flex-wrap justify-center items-center gap-6 md:gap-12">
+                <img src="https://logos-world.net/wp-content/uploads/2020/04/Samsung-Logo.png" alt="Samsung" class="h-8 md:h-12 object-contain opacity-80 hover:opacity-100 transition">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Xiaomi_logo_%282021-%29.svg/1200px-Xiaomi_logo_%282021-%29.svg.png" alt="Xiaomi" class="h-8 md:h-12 object-contain opacity-80 hover:opacity-100 transition">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/OnePlus_logo.png/800px-OnePlus_logo.png" alt="OnePlus" class="h-8 md:h-12 object-contain opacity-80 hover:opacity-100 transition">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/800px-Apple_logo_black.svg.png" alt="Apple" class="h-8 md:h-12 object-contain opacity-80 hover:opacity-100 transition">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Oppo_Logo_2019.png/800px-Oppo_Logo_2019.png" alt="Oppo" class="h-8 md:h-12 object-contain opacity-80 hover:opacity-100 transition">
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-2 text-gray-800">Our Mobile Collection</h2>
+            <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">Browse our wide range of smartphones with latest features and competitive prices</p>
+            
+            <!-- Filter Section -->
+            <div class="mb-8 bg-white p-4 rounded-lg shadow-sm">
+                <div class="flex flex-wrap items-center justify-between gap-4">
+                    <div class="flex-1 min-w-[200px]">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Brand</label>
+                        <select id="brand-filter" class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                            <option value="all">All Brands</option>
+                            <option value="samsung">Samsung</option>
+                            <option value="xiaomi">Xiaomi</option>
+                            <option value="oneplus">OnePlus</option>
+                            <option value="apple">Apple</option>
+                            <option value="oppo">Oppo</option>
+                        </select>
+                    </div>
+                    <div class="flex-1 min-w-[200px]">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Price Range</label>
+                        <select id="price-filter" class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                            <option value="all">All Prices</option>
+                            <option value="0-10000">Under ₹10,000</option>
+                            <option value="10000-20000">₹10,000 - ₹20,000</option>
+                            <option value="20000-30000">₹20,000 - ₹30,000</option>
+                            <option value="30000-50000">₹30,000 - ₹50,000</option>
+                            <option value="50000">Above ₹50,000</option>
+                        </select>
+                    </div>
+                    <div class="flex-1 min-w-[200px]">
+                        <label class="block text-sm font-medium text-gray-700 mb-1">RAM</label>
+                        <select id="ram-filter" class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                            <option value="all">All RAM</option>
+                            <option value="4">4GB</option>
+                            <option value="6">6GB</option>
+                            <option value="8">8GB</option>
+                            <option value="12">12GB</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Products Grid -->
+            <div id="products-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+            
+            <!-- View More Button -->
+            <div class="text-center mt-8">
+                <button id="load-more" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition">
+                    Load More Mobiles
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Product -->
+    <section class="py-12 bg-gradient-to-r from-blue-500 to-blue-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <span class="bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-semibold inline-block mb-4">Featured</span>
+                    <h2 class="text-3xl font-bold mb-4">Samsung Galaxy S23 Ultra</h2>
+                    <p class="text-lg mb-6">Experience the ultimate in smartphone technology with our featured product.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center"><i class="fas fa-check-circle mr-2 text-blue-200"></i> 200MP Professional Camera</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle mr-2 text-blue-200"></i> 6.8" Dynamic AMOLED 2X Display</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle mr-2 text-blue-200"></i> 5000mAh Battery with Fast Charging</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle mr-2 text-blue-200"></i> 12GB RAM + 256GB Storage</li>
+                    </ul>
+                    <div class="flex items-center">
+                        <span class="text-3xl font-bold mr-4">₹1,24,999</span>
+                        <button class="bg-white hover:bg-gray-100 text-blue-600 px-6 py-2 rounded-lg font-medium transition">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://images.samsung.com/in/smartphones/galaxy-s23-ultra/images/galaxy-s23-ultra-highlights-kv.jpg" 
+                         alt="Samsung Galaxy S23 Ultra" 
+                         class="rounded-lg shadow-2xl max-w-full h-auto md:max-w-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Sanwariya Mobile Collection Store" 
+                         class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-4 text-gray-800">About Sanwariya Mobile Collection</h2>
+                    <p class="text-gray-600 mb-4">Welcome to Sanwariya Mobile Collection, your trusted mobile store in Dhamnod. We have been serving customers with the latest smartphones and accessories since 2010.</p>
+                    <p class="text-gray-600 mb-4">Our mission is to provide high-quality mobile devices at competitive prices with excellent customer service. We offer genuine products with manufacturer warranty and reliable after-sales support.</p>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                            <span class="text-gray-700">100% Genuine Products</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                            <span class="text-gray-700">Manufacturer Warranty</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                            <span class="text-gray-700">Competitive Prices</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                            <span class="text-gray-700">Expert Advice</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-2 text-gray-800">What Our Customers Say</h2>
+            <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">Hear from our satisfied customers about their experience with Sanwariya Mobile Collection</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold mr-3">AK</div>
+                        <div>
+                            <h4 class="font-medium">Amit Kumar</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Bought my OnePlus phone from Sanwariya Mobile. Got the best price in town with genuine warranty. Very happy with their service!"</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold mr-3">PS</div>
+                        <div>
+                            <h4 class="font-medium">Priya Sharma</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Excellent customer service! They helped me choose the perfect phone within my budget. Also got free accessories with my purchase."</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold mr-3">RJ</div>
+                        <div>
+                            <h4 class="font-medium">Rahul Jain</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Had an issue with my phone after purchase. Sanwariya Mobile helped me get it repaired under warranty without any hassle. Highly recommended!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-2 text-gray-800">Contact Us</h2>
+            <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">Visit our store or get in touch for any inquiries about our products and services</p>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Our Store Information</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-blue-600 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Address</h4>
+                                    <p class="text-gray-600">Shop No. 12, Main Market, Dhamnod, Madhya Pradesh 454552</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-phone-alt text-blue-600 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Phone</h4>
+                                    <p class="text-gray-600">+91 98765 43210</p>
+                                    <p class="text-gray-600">+91 98765 43211</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope text-blue-600 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Email</h4>
+                                    <p class="text-gray-600">info@sanwariyamobile.com</p>
+                                    <p class="text-gray-600">sales@sanwariyamobile.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i class="fas fa-clock text-blue-600 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Opening Hours</h4>
+                                    <p class="text-gray-600">Monday - Saturday: 10:00 AM - 8:00 PM</p>
+                                    <p class="text-gray-600">Sunday: 11:00 AM - 6:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6">
+                            <h4 class="font-medium text-gray-800 mb-2">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-blue-400 text-white flex items-center justify-center hover:bg-blue-500 transition">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-pink-600 text-white flex items-center justify-center hover:bg-pink-700 transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center hover:bg-green-700 transition">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800">Send Us a Message</h3>
+                        <form id="contact-form" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                                <input type="text" id="name" name="name" class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required>
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required>
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required>
+                            </div>
+                            
+                            <div>
+                                <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                                <input type="text" id="subject" name="subject" class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                <textarea id="message" name="message" rows="4" class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition w-full">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="h-96 bg-gray-200">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.093109118843!2d75.4705093149549!3d22.20999948529191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962c9a5e5e1e0a1%3A0x1c1a1b1b1b1b1b1b!2sDhamnod%2C%20Madhya%20Pradesh%20454552!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy"
+                class="filter grayscale-50 hover:grayscale-0 transition duration-500">
+        </iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Sanwariya Mobile</h3>
+                    <p class="text-gray-400">Your trusted mobile store in Dhamnod offering the latest smartphones at competitive prices with excellent service.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition">Products</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Brands</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Samsung</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Xiaomi</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">OnePlus</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Apple</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Oppo</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to get updates on new arrivals and special offers.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="p-2 rounded-l-md text-gray-900 w-full focus:outline-none">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 rounded-r-md">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 Sanwariya Mobile Collection. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919876543210" 
+       class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg hover:bg-green-600 transition z-50">
+       <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Sample Mobile Data
+        const mobileData = [
+            {
+                id: 1,
+                name: "Samsung Galaxy S23",
+                brand: "samsung",
+                price: 79999,
+                ram: 8,
+                storage: "128GB",
+                image: "https://images.samsung.com/in/smartphones/galaxy-s23/images/galaxy-s23-highlights-kv.jpg",
+                colors: ["Phantom Black", "Cream", "Green"],
+                rating: 4.8,
+                features: ["120Hz AMOLED Display", "50MP Camera", "3900mAh Battery"]
+            },
+            {
+                id: 2,
+                name: "Xiaomi 13 Pro",
+                brand: "xiaomi",
+                price: 69999,
+                ram: 8,
+                storage: "256GB",
+                image: "https://i01.appmifile.com/webfile/globalimg/products/pc/xiaomi-13-pro/specs-header.png",
+                colors: ["Ceramic Black", "Ceramic White", "Mountain Green"],
+                rating: 4.6,
+                features: ["120Hz AMOLED Display", "1-inch Camera Sensor", "4820mAh Battery"]
+            },
+            {
+                id: 3,
+                name: "OnePlus 11 5G",
+                brand: "oneplus",
+                price: 56999,
+                ram: 8,
+                storage: "128GB",
+                image: "https://image01.oneplus.net/ebp/202301/04/1-m00-4a-1e-cpgm7wq3w3eavz8waajx3q3k1y8929.png",
+                colors: ["Titan Black", "Eternal Green"],
+                rating: 4.7,
+                features: ["120Hz AMOLED Display", "50MP Camera", "5000mAh Battery"]
+            },
+            {
+                id: 4,
+                name: "iPhone 14",
+                brand: "apple",
+                price: 69900,
+                ram: 6,
+                storage: "128GB",
+                image: "https://www.apple.com/in/iphone-14/images/overview/hero/hero_iphone14_yellow__d2gaf7gz4wq2_large.jpg",
+                colors: ["Blue", "Purple", "Midnight", "Starlight", "Red"],
+                rating: 4.9,
+                features: ["Super Retina XDR Display", "12MP Camera", "3279mAh Battery"]
+            },
+            {
+                id: 5,
+                name: "Oppo Reno 8 Pro",
+                brand: "oppo",
+                price: 41999,
+                ram: 12,
+                storage: "256GB",
+                image: "https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/reno8-pro-5g/navigation/Reno8-Pro-5G-navigation-blue-v2.png",
+                colors: ["Glazed Black", "Glazed Green"],
+                rating: 4.3,
+                features: ["120Hz AMOLED Display", "50MP Camera", "4500mAh Battery"]
+            },
+            {
+                id: 6,
+                name: "Samsung Galaxy A54 5G",
+                brand: "samsung",
+                price: 36999,
+                ram: 8,
+                storage: "128GB",
+                image: "https://images.samsung.com/is/image/samsung/p6pim/in/sm-a546elbiins/gallery/in-galaxy-a54-5g-sm-a546-sm-a546elbiins-534866321?$1300_1038_PNG$",
+                colors: ["Awesome Black", "Awesome White", "Awesome Violet"],
+                rating: 4.4,
+                features: ["120Hz AMOLED Display", "50MP Camera", "5000mAh Battery"]
+            },
+            {
+                id: 7,
+                name: "Xiaomi Redmi Note 12 Pro+",
+                brand: "xiaomi",
+                price: 27999,
+                ram: 8,
+                storage: "256GB",
+                image: "https://i01.appmifile.com/webfile/globalimg/products/pc/redmi-note-12-pro-plus-5g/specs-header.png",
+                colors: ["Iceberg Blue", "Glacier White", "Midnight Black"],
+                rating: 4.2,
+                features: ["120Hz AMOLED Display", "200MP Camera", "5000mAh Battery"]
+            },
+            {
+                id: 8,
+                name: "OnePlus Nord CE 3 Lite",
+                brand: "oneplus",
+                price: 19999,
+                ram: 8,
+                storage: "128GB",
+                image: "https://image01.oneplus.net/ebp/202304/04/1-M00-4A-1E/CpgnCWR3e0yAe8b2AAD1W3Q6v5k144.png",
+                colors: ["Pastel Lime", "Chromatic Gray"],
+                rating: 4.1,
+                features: ["120Hz LCD Display", "108MP Camera", "5000mAh Battery"]
+            },
+            {
+                id: 9,
+                name: "iPhone SE (2022)",
+                brand: "apple",
+                price: 49900,
+                ram: 4,
+                storage: "64GB",
+                image: "https://www.apple.com/in/iphone-se/images/overview/hero/hero_iphone_se_avail__eg7i3x3x6z6e_large.jpg",
+                colors: ["Midnight", "Starlight", "Red"],
+                rating: 4.3,
+                features: ["Retina HD Display", "12MP Camera", "2018mAh Battery"]
+            },
+            {
+                id: 10,
+                name: "Oppo A78 5G",
+                brand: "oppo",
+                price: 18999,
+                ram: 8,
+                storage: "128GB",
+                image: "https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/a78-5g/navigation/a78-navigation-blue-v2.png",
+                colors: ["Glowing Black", "Glowing Purple"],
+                rating: 4.0,
+                features: ["90Hz LCD Display", "50MP Camera", "5000mAh Battery"]
+            },
+            {
+                id: 11,
+                name: "Samsung Galaxy M14 5G",
+                brand: "samsung",
+                price: 14999,
+                ram: 6,
+                storage: "128GB",
+                image: "https://images.samsung.com/is/image/samsung/p6pim/in/sm-m146blbgins/gallery/in-galaxy-m14-5g-sm-m146-sm-m146blbgins-534865105?$1300_1038_PNG$",
+                colors: ["Icy Silver", "Berry Blue"],
+                rating: 4.0,
+                features: ["90Hz LCD Display", "50MP Camera", "6000mAh Battery"]
+            },
+            {
+                id: 12,
+                name: "Xiaomi Redmi 12C",
+                brand: "xiaomi",
+                price: 8999,
+                ram: 4,
+                storage: "64GB",
+                image: "https://i01.appmifile.com/webfile/globalimg/products/pc/redmi-12c/specs-header.png",
+                colors: ["Graphite Gray", "Ocean Blue", "Mint Green"],
+                rating: 3.9,
+                features: ["HD+ Display", "50MP Camera", "5000mAh Battery"]
+            }
+        ];
+        
+        // Display Mobile Products
+        const productsContainer = document.getElementById('products-container');
+        const brandFilter = document.getElementById('brand-filter');
+        const priceFilter = document.getElementById('price-filter');
+        const ramFilter = document.getElementById('ram-filter');
+        const loadMoreButton = document.getElementById('load-more');
+        
+        let displayedProducts = 8;
+        
+        function displayProducts(products) {
+            productsContainer.innerHTML = '';
+            
+            const limitedProducts = products.slice(0, displayedProducts);
+            
+            limitedProducts.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'bg-white rounded-lg overflow-hidden shadow-md mobile-card transition duration-300';
+                
+                productCard.innerHTML = `
+                    <div class="relative">
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-contain p-4">
+                        <span class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded">${product.brand.charAt(0).toUpperCase() + product.brand.slice(1)}</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-1 text-gray-800">${product.name}</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400 mr-2">
+                                ${Array(Math.floor(product.rating)).fill().map(() => '<i class="fas fa-star"></i>').join('')}
+                                ${product.rating % 1 ? '<i class="fas fa-star-half-alt"></i>' : ''}
+                            </div>
+                            <span class="text-gray-600 text-sm">${product.rating}</span>
+                        </div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-gray-700 font-medium">₹${product.price.toLocaleString('en-IN')}</span>
+                            <span class="text-sm bg-gray-100 px-2 py-1 rounded">${product.ram}GB RAM</span>
+                        </div>
+                        <div class="mb-3">
+                            <p class="text-sm text-gray-600 mb-1"><i class="fas fa-database mr-1"></i> ${product.storage}</p>
+                            <p class="text-sm text-gray-600"><i class="fas fa-palette mr-1"></i> ${product.colors.join(', ')}</p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm font-medium transition flex-1">
+                                Buy Now
+                            </button>
+                            <button class="border border-blue-600 text-blue-600 hover:bg-blue-50 px-3 py-1 rounded text-sm font-medium transition">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+                
+                productsContainer.appendChild(productCard);
+            });
+            
+            if (displayedProducts >= products.length) {
+                loadMoreButton.style.display = 'none';
+            } else {
+                loadMoreButton.style.display = 'block';
+            }
+        }
+        
+        // Filter Products
+        function filterProducts() {
+            const brandValue = brandFilter.value;
+            const priceValue = priceFilter.value;
+            const ramValue = ramFilter.value;
+            
+            let filteredProducts = mobileData;
+            
+            // Filter by brand
+            if (brandValue !== 'all') {
+                filteredProducts = filteredProducts.filter(product => product.brand === brandValue);
+            }
+            
+            // Filter by price
+            if (priceValue !== 'all') {
+                const [min, max] = priceValue.split('-').map(Number);
+                if (max) {
+                    filteredProducts = filteredProducts.filter(product => product.price >= min && product.price <= max);
+                } else {
+                    filteredProducts = filteredProducts.filter(product => product.price >= min);
+                }
+            }
+            
+            // Filter by RAM
+            if (ramValue !== 'all') {
+                filteredProducts = filteredProducts.filter(product => product.ram === parseInt(ramValue));
+            }
+            
+            displayedProducts = 8;
+            displayProducts(filteredProducts);
+        }
+        
+        // Event Listeners
+        brandFilter.addEventListener('change', filterProducts);
+        priceFilter.addEventListener('change', filterProducts);
+        ramFilter.addEventListener('change', filterProducts);
+        
+        loadMoreButton.addEventListener('click', () => {
+            displayedProducts += 4;
+            filterProducts();
+        });
+        
+        // Contact Form Submission
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Here you would typically send this data to a server
+            alert(`Thank you, ${name}! Your message has been received. We'll contact you soon at ${email} or ${phone}.`);
+            
+            // Reset form
+            contactForm.reset();
+        });
+        
+        // Initialize
+        displayProducts(mobileData);
+    </script>
+</body>
+</html>
